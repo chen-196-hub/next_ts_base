@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app 
+    command: sh -c "cd hello-next && yarn dev"
+    ports:
+      - "8090:8090"
